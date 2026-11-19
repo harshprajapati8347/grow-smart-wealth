@@ -35,7 +35,7 @@ export function LeadCapture() {
   }
 
   return (
-    <section className="bg-pf-ink px-4 py-20 sm:py-28">
+    <section id="contact" className="scroll-mt-24 scroll-mb-20 bg-pf-ink px-4 py-20 sm:py-28">
       <Reveal className="mx-auto max-w-xl text-center">
         <h2 className="text-[2rem] leading-[1.05] font-extrabold tracking-[-0.035em] text-pf-on-dark sm:text-5xl">
           {leadCapture.title}
