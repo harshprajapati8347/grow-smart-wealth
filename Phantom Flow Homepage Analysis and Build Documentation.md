@@ -1,7 +1,5 @@
 # Phantom Flow Homepage: Analysis and Build Documentation
 
-Nov 17, 2026 · @Harsh Prajapati
-
 ## Purpose and scope
 
 This document describes the Phantom Flow homepage (`/`) in enough detail to rebuild it: every section, its colours, its construction, and the requirements behind it. It covers the homepage only. Other pages, the blog and the payment gateway are out of scope.
@@ -215,7 +213,7 @@ The 11 sections reduce to ten reusable components. Building these once keeps the
 
 This is a recommendation, not what the live site uses. The colour values point towards Tailwind CSS, but the framework is unconfirmed.
 
-- **Framework:** Astro or Next.js, using static generation for speed and search visibility.
+- **Framework:** Next.js, using static generation for speed and search visibility.
 - **Styling:** Tailwind CSS with the palette as design tokens.
 - **Interactivity:** small islands of JavaScript for the menu, accordion, form and video; no heavy framework needed on this page.
 - **Content:** a typed data file for testimonials, features, FAQ and footer links.

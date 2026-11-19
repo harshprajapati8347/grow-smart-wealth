@@ -46,25 +46,49 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --color-pf-page: #fafafa;
+  --color-pf-surface: #faf9f7;
+  --color-pf-ink: #1c1917;
+  --color-pf-ink-hover: #292524;
+  --color-pf-copy: #262626;
+  --color-pf-body: #57534e;
+  --color-pf-quiet: #78716c;
+  --color-pf-faint: #a8a29e;
+  --color-pf-line: #e7e5e4;
+  --color-pf-line-strong: #d6d3d1;
+  --color-pf-emerald: #059669;
+  --color-pf-emerald-deep: #047857;
+  --color-pf-emerald-soft: #ecfdf5;
+  --color-pf-emerald-softer: #d1fae5;
+  --color-pf-violet: #8b5cf6;
+  --color-pf-on-dark: #fafafa;
+  --color-pf-dot-red: #ff5f57;
+  --color-pf-dot-yellow: #febc2e;
+  --color-pf-dot-green: #28c840;
+  --color-pf-sell: #fdf2f8;
+  --color-pf-wait: #fef3c7;
+  --color-pf-mark: #e8a23a;
+  --shadow-pf-card: 0 1px 2px rgb(28 25 23 / 0.04), 0 16px 40px -24px rgb(28 25 23 / 0.16);
+  --shadow-pf-frame: 0 28px 70px -32px rgb(28 25 23 / 0.38);
 }
 
 :root {
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #1c1917;
+  --primary-foreground: #fafafa;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #1c1917;
+  --muted: #f5f5f4;
+  --muted-foreground: #78716c;
+  --accent: #f5f5f4;
+  --accent-foreground: #1c1917;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #e7e5e4;
+  --input: #e7e5e4;
+  --ring: #1c1917;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -79,8 +103,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: #fafafa;
+  --foreground: #262626;
 }
 
 .dark {
@@ -121,10 +145,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
   html {
-    @apply font-sans;
+    scroll-behavior: auto;
   }
 }
