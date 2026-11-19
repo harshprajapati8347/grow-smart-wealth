@@ -139,26 +139,32 @@ export const features = {
     {
       title: "Trend Shift Signals",
       body: "See when the indicator changes from an upward trend to a downward trend, or back again, right on your chart.",
+      icon: "/assets/trend.svg",
     },
     {
       title: "Buy & Sell Zones",
       body: "The indicator highlights potential buy and sell zones calculated from chart data. These zones show up right on your chart.",
+      icon: "/assets/zones.svg",
     },
     {
       title: "Buy & Sell Signals",
       body: "Clear arrows on your chart. Green for buy, red for sell.",
+      icon: "/assets/signals.svg",
     },
     {
       title: "Smart Alerts",
       body: "Get notified when there’s a trade setup. Check your chart, confirm, and enter.",
+      icon: "/assets/alerts.svg",
     },
     {
       title: "Works on Any Market",
       body: "Forex, crypto, stocks, indices — any chart on TradingView. Any timeframe. Nothing to download.",
+      icon: "/assets/any-market.svg",
     },
     {
       title: "Private Discord",
       body: "Get direct help, share setups, and access exclusive resources — all inside a private Discord with traders running the same edge.",
+      icon: "/assets/private.svg",
     },
   ],
   ai: {
