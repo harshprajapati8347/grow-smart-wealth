@@ -172,7 +172,7 @@ export function SocialProof() {
                       role="tabpanel"
                       id={`${baseId}-search-${index}`}
                       aria-labelledby={`${baseId}-tab-${index}`}
-                      hidden="until-found"
+                      hidden={true as boolean}
                       data-testimonial-panel=""
                       data-index={index}
                       className="col-start-1 row-start-1"

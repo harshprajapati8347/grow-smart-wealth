@@ -304,19 +304,45 @@ export const faq = {
   ],
 }
 
-export const leadCapture = {
-  title: "Watch the $2K trade breakdown",
-  subtitle: "Setup, entry, and result — sent to your inbox.",
-  label: "Email address",
-  button: "Send the breakdown",
-  consent: "We’ll use this address to send the breakdown.",
-  success:
-    "Saved in this browser for the demo. Nothing was emailed — delivery isn’t connected yet.",
-  emptyError: "Enter an email address.",
-  invalidError: "Enter a valid email address.",
+export const contact = {
+  // The id in https://formcarry.com/s/{id}. Paste yours here.
+  formcarryId: process.env.FORMCARRY_ID || "",
+  eyebrow: "Contact",
+  title: "Contact us",
+  subtitle: "Send a note and we’ll get back to you.",
+  nameLabel: "Name",
+  namePlaceholder: "Your name",
+  nameError: "Name must be at least 2 characters",
+  emailLabel: "Email",
+  emailPlaceholder: "you@email.com",
+  emailError: "Please enter a valid email address",
+  interestLabel: "Interested in",
+  interestError: "Choose what you’re interested in.",
+  interests: ["Phantom Flow", "Phantom AI", "Partnership", "Something else"],
+  messageLabel: "Message",
+  messagePlaceholder: "Tell us how we can help...",
+  messageError: "Message must be at least 10 characters",
+  submit: "Send message",
 }
 
 export const footer = {
+  socials: [
+    {
+      label: "@getphantomflow on Instagram",
+      href: "https://instagram.com/getphantomflow",
+      icon: "instagram",
+    },
+    {
+      label: "@getphantomflow on X",
+      href: "https://x.com/getphantomflow",
+      icon: "x",
+    },
+    {
+      label: "@getphantomflow on YouTube",
+      href: "https://youtube.com/@getphantomflow",
+      icon: "youtube",
+    },
+  ],
   disclaimer:
     "Phantom Flow is a trading tool designed to support your own analysis and decision-making. We do not provide financial advice, and results are not guaranteed. Trading involves risk. Always do your own research.",
   address: "131 Continental Dr, Newark, DE 19713, US",

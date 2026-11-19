@@ -161,6 +161,19 @@
   }
 }
 
+.pf-contact-error {
+  display: none;
+}
+
+.pf-contact-field:user-invalid ~ .pf-contact-error,
+.pf-contact-field.user-invalid-fallback ~ .pf-contact-error {
+  display: block;
+}
+
+.pf-contact-field:is(:user-invalid, .user-invalid-fallback) {
+  border-color: var(--destructive);
+}
+
 .pf-quote-stage {
   box-shadow:
     rgba(28, 25, 23, 0.04) 0px 2px 4px,

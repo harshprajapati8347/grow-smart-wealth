@@ -6,7 +6,7 @@ import { Faq } from "@/components/sections/Faq";
 import { Features } from "@/components/sections/Features";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { LeadCapture } from "@/components/sections/LeadCapture";
+import { Contact } from "@/components/sections/Contact";
 import { Pricing } from "@/components/sections/Pricing";
 import { RootCause } from "@/components/sections/RootCause";
 import { SocialProof } from "@/components/sections/SocialProof";
@@ -26,7 +26,7 @@ export default function Home() {
         <HowItWorks />
         <Pricing />
         <Faq />
-        <LeadCapture />
+        <Contact />
       </main>
       <SiteFooter />
       <PurchaseBar />
