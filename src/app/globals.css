@@ -160,3 +160,18 @@
     scroll-behavior: auto;
   }
 }
+
+.pf-quote-stage {
+  box-shadow:
+    rgba(28, 25, 23, 0.04) 0px 2px 4px,
+    rgba(28, 25, 23, 0.08) 0px 16px 40px;
+}
+
+@media (forced-colors: active) {
+  .testimonial-tab[aria-selected="true"]::after {
+    content: "";
+    position: absolute;
+    inset: auto 0.75rem 0.3rem;
+    border-block-end: 3px solid CanvasText;
+  }
+}
