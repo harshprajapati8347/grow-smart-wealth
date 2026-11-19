@@ -93,16 +93,34 @@ export const solution = {
   subtitle: "The difference isn’t talent. It’s what’s on their chart.",
   cards: [
     {
+      index: "01",
       title: "See key price zones",
       body: "Zones drawn from chart data give you clear levels to watch when planning a trade.",
+      image: {
+        asset: { url: "/assets/the-sollution-1.svg" },
+        width: 400,
+        height: 170,
+      },
     },
     {
+      index: "02",
       title: "One clear answer: up or down",
       body: "See whether prices are moving up or down, right on your chart.",
+      image: {
+        asset: { url: "/assets/the-sollution-2.svg" },
+        width: 280,
+        height: 150,
+      },
     },
     {
+      index: "03",
       title: "A repeatable process — with alerts",
       body: "A framework you follow every session, plus notifications when setups appear. Less screen time, more confidence.",
+      image: {
+        asset: { url: "/assets/the-sollution-3.svg" },
+        width: 280,
+        height: 150,
+      },
     },
   ],
   closing: "That’s exactly what Phantom Flow was built to do.",
