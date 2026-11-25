@@ -48,6 +48,26 @@ export const hero = {
   cta: "Get Grow Smart Wealth",
 };
 
+export const heroDemoSeconds = 6;
+
+export const heroDemos = [
+  {
+    title: "1 Day Candle",
+    description: "1 Day Candle",
+    src: "https://ik.imagekit.io/harshprajapati/GSW/1day.mp4",
+  },
+  {
+    title: "1 Week Candle",
+    description: "1 Week Candle",
+    src: "https://ik.imagekit.io/harshprajapati/GSW/1day.mp4",
+  },
+  {
+    title: "1 Month Candle",
+    description: "1 Month Candle",
+    src: "https://ik.imagekit.io/harshprajapati/GSW/1day.mp4",
+  },
+] as const;
+
 export const rootCause = {
   eyebrow: "The root cause",
   title: "It's not your mistake. It's your trading & investing style.",
@@ -320,21 +340,10 @@ export const footer = {
       ],
     },
     {
-      title: "Trading",
-      links: [
-        { label: "Guide", href: "/guide" },
-        { label: "Documentation", href: "/docs" },
-        { label: "Support", href: "#contact" },
-        { label: "SMC Glossary", href: "/glossary" },
-        { label: "Compare Indicators", href: "/compare" },
-      ],
-    },
-    {
       title: "Company",
       links: [
+        { label: "Support", href: "#contact" },
         { label: "About us", href: "/about" },
-        { label: "Compare Indicators", href: "/compare" },
-        { label: "Partner Program", href: "/partners" },
       ],
     },
     {
@@ -342,7 +351,6 @@ export const footer = {
       links: [
         { label: "Privacy Policy", href: "/privacy" },
         { label: "Terms of Service", href: "/terms" },
-        { label: "Refund Policy", href: "/refund" },
       ],
     },
   ],
