@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Menu } from "lucide-react"
 import { navLinks } from "@/data/site"
@@ -49,16 +49,8 @@ export function MobileNav() {
               </AppLink>
             </DialogClose>
           ))}
-          <DialogClose asChild>
-            <AppLink
-              href="/login"
-              className="rounded-xl px-2 py-3 text-2xl font-semibold tracking-tight text-pf-ink"
-            >
-              Login
-            </AppLink>
-          </DialogClose>
         </nav>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

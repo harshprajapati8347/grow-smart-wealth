@@ -26,8 +26,7 @@ export const navLinks = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-  { label: "Blog", href: "/blog" },
-  { label: "Support", href: "/support" },
+  { label: "Support", href: "#contact" },
 ] as const;
 
 export const painLines = [
@@ -366,9 +365,8 @@ export const footer = {
       title: "Trading",
       links: [
         { label: "Guide", href: "/guide" },
-        { label: "Blog", href: "/blog" },
         { label: "Documentation", href: "/docs" },
-        { label: "Support", href: "/support" },
+        { label: "Support", href: "#contact" },
         { label: "SMC Glossary", href: "/glossary" },
         { label: "Compare Indicators", href: "/compare" },
       ],
@@ -377,7 +375,6 @@ export const footer = {
       title: "Company",
       links: [
         { label: "About us", href: "/about" },
-        { label: "Blog", href: "/blog" },
         { label: "Compare Indicators", href: "/compare" },
         { label: "Partner Program", href: "/partners" },
       ],

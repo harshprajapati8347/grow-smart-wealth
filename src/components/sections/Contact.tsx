@@ -8,7 +8,7 @@ export function Contact() {
   const action = `https://formcarry.com/s/${contact.formcarryId}`
 
   return (
-    <section id="contact" aria-labelledby={titleId} className="scroll-mt-24 bg-pf-surface px-5 py-20 sm:px-6 sm:py-24 md:py-32">
+    <section id="contact" aria-labelledby={titleId} className="scroll-mt-24 bg-white px-5 py-20 sm:px-6 sm:py-24 md:py-32">
       <div className="mx-auto max-w-4xl">
         <Reveal>
           <header className="mb-10 sm:mb-14">
