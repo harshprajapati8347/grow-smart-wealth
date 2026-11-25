@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { features } from "@/data/site"
 import { Reveal } from "@/components/shared/Reveal"
 
@@ -19,7 +20,7 @@ export function Features() {
           {features.cards.map((card, index) => (
             <Reveal key={card.title} delay={(index % 3) * 0.05} className="h-full">
               <article className="group h-full rounded-[16px] border border-stone-200/70 bg-stone-50 p-6 transition-[border-color,box-shadow] duration-300 hover:border-stone-300 hover:shadow-[0_2px_16px_rgba(0,0,0,0.04)] motion-reduce:transition-none sm:p-7">
-                <img
+                <Image
                   src={card.icon}
                   alt=""
                   width={32}

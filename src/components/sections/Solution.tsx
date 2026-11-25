@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs"
 import { join } from "node:path"
 import { solution } from "@/data/site"
+import { AppLink } from "@/components/shared/AppLink"
 import { Reveal } from "@/components/shared/Reveal"
 
 const cardChrome =
@@ -116,12 +117,12 @@ export function Solution() {
           <p className="mb-5 text-2xl font-bold text-[#1c1917] md:text-3xl">
             {solution.closing}
           </p>
-          <a
+          <AppLink
             href="#pricing"
             className="inline-block rounded-full bg-[#1c1917] px-8 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#292524] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1c1917]"
           >
             {solution.cta}
-          </a>
+          </AppLink>
         </Reveal>
       </div>
     </section>

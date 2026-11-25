@@ -2,6 +2,7 @@
 
 import { BadgeCheck } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
+import Image from "next/image"
 import { useCallback, useEffect, useId, useRef, useState } from "react"
 import { socialProof } from "@/data/site"
 import { testimonials, type Testimonial } from "@/data/testimonials"
@@ -19,15 +20,7 @@ function Portrait({
   className?: string
 }) {
   return (
-    <img
-      src={src}
-      alt=""
-      width={36}
-      height={36}
-      loading="lazy"
-      decoding="async"
-      className={className}
-    />
+    <Image src={src} alt="" width={36} height={36} className={className} />
   )
 }
 
@@ -69,7 +62,6 @@ export function SocialProof() {
     activeRef.current = index
     setActive(index)
     if (onscreenRef.current) startRef.current()
-    return index !== active
   }, [])
 
   useEffect(() => {
@@ -185,6 +177,7 @@ export function SocialProof() {
             </div>
 
             <div
+              role="tablist"
               aria-label="Trader testimonials"
               className="space-y-1.5"
               {...({ focusgroup: "tablist nomemory" } as Record<string, string>)}
@@ -196,6 +189,8 @@ export function SocialProof() {
                     key={item.handle}
                     type="button"
                     id={`${baseId}-tab-${index}`}
+                    role="tab"
+                    aria-controls={selected ? `${baseId}-panel-${index}` : `${baseId}-search-${index}`}
                     className="testimonial-tab group relative w-full touch-manipulation rounded-xl border px-4 py-3 text-start transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900 aria-selected:border-stone-900 aria-selected:bg-stone-900 aria-selected:text-white aria-[selected=false]:border-stone-200/60 aria-[selected=false]:bg-stone-50 aria-[selected=false]:text-stone-600 aria-[selected=false]:hover:bg-stone-100"
                     aria-selected={selected}
                     onClick={() => go(index)}

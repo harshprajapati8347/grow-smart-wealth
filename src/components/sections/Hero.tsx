@@ -1,25 +1,23 @@
-"use client"
+"use client";
 
-import { AnimatePresence, motion } from "framer-motion"
-import { useEffect, useState } from "react"
-import { hero, painLines } from "@/data/site"
-import { CtaLink } from "@/components/shared/CtaLink"
-import { fadeUp, stagger } from "@/lib/motion"
-import { LiveDemo } from "@/components/sections/LiveDemo"
-
-export function Hero() {
-  const [index, setIndex] = useState(0)
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState, type ReactNode } from "react";
+import { hero, painLines } from "@/data/site";
+import { CtaLink } from "@/components/shared/CtaLink";
+import { fadeUp, stagger } from "@/lib/motion";
+export function Hero({ demo }: { demo: ReactNode }) {
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)")
-    if (media.matches) return
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (media.matches) return;
 
     const timer = window.setInterval(() => {
-      setIndex((current) => (current + 1) % painLines.length)
-    }, 2800)
+      setIndex((current) => (current + 1) % painLines.length);
+    }, 2800);
 
-    return () => window.clearInterval(timer)
-  }, [])
+    return () => window.clearInterval(timer);
+  }, []);
 
   return (
     <section className="bg-pf-page px-4 pt-16 pb-20 sm:pt-24 sm:pb-28">
@@ -32,7 +30,10 @@ export function Hero() {
         <motion.div variants={fadeUp}>
           <p className="inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full border border-pf-line bg-white px-4 py-2 text-sm text-pf-body shadow-pf-card">
             <span>{hero.prompt}</span>
-            <span className="size-1.5 shrink-0 rounded-full bg-pf-emerald" aria-hidden />
+            <span
+              className="size-1.5 shrink-0 rounded-full bg-pf-emerald"
+              aria-hidden
+            />
             <span className="relative inline-grid h-5 min-w-[15.5rem] overflow-hidden text-left font-medium text-pf-ink sm:min-w-[18rem]">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
@@ -71,7 +72,7 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      <LiveDemo />
+      {demo}
     </section>
-  )
+  );
 }

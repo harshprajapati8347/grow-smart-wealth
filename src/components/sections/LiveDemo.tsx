@@ -1,5 +1,3 @@
-"use client"
-
 import { Reveal } from "@/components/shared/Reveal"
 import { SvgSlot } from "@/components/shared/SvgSlot"
 

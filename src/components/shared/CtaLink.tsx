@@ -1,10 +1,12 @@
 import { ArrowRight } from "lucide-react"
+import type { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
+import { AppLink } from "@/components/shared/AppLink"
 import { cn } from "@/lib/utils"
 
 type CtaLinkProps = {
   href?: string
-  children?: React.ReactNode
+  children?: ReactNode
   showArrow?: boolean
   tone?: "dark" | "light"
   className?: string
@@ -28,10 +30,10 @@ export function CtaLink({
         className
       )}
     >
-      <a href={href}>
+      <AppLink href={href}>
         {children}
         {showArrow ? <ArrowRight /> : null}
-      </a>
+      </AppLink>
     </Button>
   )
 }

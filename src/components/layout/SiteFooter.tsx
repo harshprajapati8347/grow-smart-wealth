@@ -1,4 +1,5 @@
 import { footer } from "@/data/site"
+import { AppLink } from "@/components/shared/AppLink"
 
 function SocialIcon({ icon }: { icon: string }) {
   const className = "h-4 w-4"
@@ -23,13 +24,8 @@ function SocialIcon({ icon }: { icon: string }) {
   )
 }
 
-async function copyrightYear() {
-  "use cache"
-  return new Date().getFullYear()
-}
-
-export async function SiteFooter() {
-  const year = await copyrightYear()
+export function SiteFooter() {
+  const year = new Date().getFullYear()
 
   return (
     <footer className="bg-pf-ink pb-24 text-pf-on-dark">
@@ -40,12 +36,12 @@ export async function SiteFooter() {
             <ul className="mt-4 space-y-2.5">
               {group.links.map((link) => (
                 <li key={`${group.title}-${link.label}`}>
-                  <a
+                  <AppLink
                     href={link.href}
                     className="text-sm text-pf-faint transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                   >
                     {link.label}
-                  </a>
+                  </AppLink>
                 </li>
               ))}
             </ul>
@@ -68,7 +64,7 @@ export async function SiteFooter() {
           </div>
           <nav aria-label="Social" className="flex items-center justify-end">
             {footer.socials.map((social) => (
-              <a
+              <AppLink
                 key={social.href}
                 href={social.href}
                 target="_blank"
@@ -77,7 +73,7 @@ export async function SiteFooter() {
                 className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-pf-faint transition-colors duration-200 hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 <SocialIcon icon={social.icon} />
-              </a>
+              </AppLink>
             ))}
           </nav>
         </div>

@@ -1,4 +1,5 @@
 import { Check, ShieldCheck } from "lucide-react"
+import { AppLink } from "@/components/shared/AppLink"
 import { pricing } from "@/data/site"
 import { Reveal } from "@/components/shared/Reveal"
 
@@ -130,7 +131,7 @@ export function Pricing() {
 
         <Reveal>
           <div className="mt-10 sm:mt-12">
-            <a
+            <AppLink
               href="#contact"
               className="group flex min-h-14 w-full items-center justify-center rounded-full bg-pf-ink px-6 py-4 text-[15px] font-semibold text-white shadow-[0_1px_2px_rgba(28,25,23,0.18),0_6px_12px_rgba(28,25,23,0.14),0_18px_36px_rgba(28,25,23,0.16),inset_0_1px_0_rgba(255,255,255,0.18)] transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-pf-ink-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pf-ink motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:text-base"
             >
@@ -143,7 +144,7 @@ export function Pricing() {
                   →
                 </span>
               </span>
-            </a>
+            </AppLink>
             <div className="mt-4 flex items-center justify-center gap-2 sm:mt-5">
               <ShieldCheck className="size-4 shrink-0 text-pf-emerald/60" aria-hidden />
               <p className="text-[12px] text-pretty text-pf-faint sm:text-[13px]">{pricing.checkoutNote}</p>

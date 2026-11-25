@@ -1,4 +1,4 @@
-export const bonusDeadline = "2026-12-01"
+export const bonusDeadline = "2026-12-01";
 
 export const offer = {
   price: "$149",
@@ -11,15 +11,15 @@ export const offer = {
   othersThreeYear: "$1,440–$2,520",
   othersAnnual: "$40–$70/mo × 12 = $480–$840 every year",
   riskLine: "One bad trade: gone in a single day",
-}
+};
 
 export function bonusDateLabel(withYear = false) {
-  const [year, month, day] = bonusDeadline.split("-").map(Number)
+  const [year, month, day] = bonusDeadline.split("-").map(Number);
   return new Intl.DateTimeFormat("en-US", {
     month: "long",
     day: "numeric",
     ...(withYear ? { year: "numeric" } : {}),
-  }).format(new Date(year, month - 1, day))
+  }).format(new Date(year, month - 1, day));
 }
 
 export const navLinks = [
@@ -28,21 +28,26 @@ export const navLinks = [
   { label: "FAQ", href: "#faq" },
   { label: "Blog", href: "/blog" },
   { label: "Support", href: "/support" },
-] as const
+] as const;
 
 export const painLines = [
   "You buy... then price pulls back.",
   "You sell... then it keeps going.",
   "You hold... then price drops fast.",
   "You hesitate... then it runs.",
-]
+];
+
+export const heroTitles = [
+  "Know when to buy. Know when to sell.",
+  "Buy and sell areas. Marked on your chart.",
+];
 
 export const hero = {
   prompt: "Does this sound like you?",
   title: ["Know when to buy.", "Know when to sell."],
   body: "Phantom Flow shows you the zones that matter — right on your chart. You see the setup. You make the call. Ready in under 2 minutes.",
   cta: "Get Phantom Flow",
-}
+};
 
 export const rootCause = {
   eyebrow: "The root cause",
@@ -85,7 +90,7 @@ export const rootCause = {
     { label: "Sell", tone: "sell" },
     { label: "Wait", tone: "wait" },
   ],
-} as const
+} as const;
 
 export const solution = {
   eyebrow: "The solution",
@@ -125,13 +130,13 @@ export const solution = {
   ],
   closing: "That’s exactly what Phantom Flow was built to do.",
   cta: "See It On Your Chart",
-}
+};
 
 export const socialProof = {
   eyebrow: "From real traders",
   title: "Thousands of traders use it daily.",
   subtitle: "Here’s what they have to say.",
-}
+};
 
 export const features = {
   title: "Everything you need. Nothing you don’t.",
@@ -170,7 +175,8 @@ export const features = {
   ai: {
     title: "Phantom AI — Your Trading Assistant",
     tag: "Limited time bonus",
-    intro: "Got a question about your setup? Ask Phantom AI. It knows the indicator inside and out.",
+    intro:
+      "Got a question about your setup? Ask Phantom AI. It knows the indicator inside and out.",
     exchanges: [
       {
         question: "I just added it to my chart. What am I looking at?",
@@ -183,7 +189,8 @@ export const features = {
           "That box is a zone calculated from price data. If the trend is green and price pulls back into that zone, you can watch how price reacts before deciding whether to buy.",
       },
       {
-        question: "Can I get alerts so I don’t have to watch the chart all day?",
+        question:
+          "Can I get alerts so I don’t have to watch the chart all day?",
         answer:
           "Yes — click Phantom Flow on your chart, open Settings, turn on the alerts you want, then hit ‘Create Alert’ in TradingView. You’ll get notified on your phone when something happens.",
       },
@@ -194,7 +201,7 @@ export const features = {
       },
     ],
   },
-}
+};
 
 export const howItWorks = {
   eyebrow: "How it works",
@@ -214,7 +221,7 @@ export const howItWorks = {
       body: "Buy zones, sell zones, and trend changes — all painted on your chart with real-time alerts.",
     },
   ],
-}
+};
 
 export const pricing = {
   title: "One investment. Yours for life.",
@@ -259,7 +266,7 @@ export const pricing = {
   youPay: "You pay ₹14,351.53 once",
   checkoutNote: "Secure checkout via Stripe · Instant delivery",
   cta: "Get Phantom Flow",
-}
+};
 
 export const faq = {
   eyebrow: "FAQ",
@@ -302,11 +309,11 @@ export const faq = {
         "Because an indicator doesn’t trade. Traders do.\n\nGive ten people the same chart and you’ll get ten different results. The ones who do well see the market clearly and act with discipline. Phantom Flow gives you the first part: trend, structure and momentum on one clean chart, every session. The discipline is yours.\n\nThat’s why sharing it takes nothing from us, and why it’s worth so much to the trader using it. Pay once, and it stays on your chart for good.",
     },
   ],
-}
+};
 
 export const contact = {
   // The id in https://formcarry.com/s/{id}. Paste yours here.
-  formcarryId: process.env.FORMCARRY_ID || "",
+  formcarryId: process.env.NEXT_PUBLIC_FORMCARRY_ID || process.env.FORMCARRY_ID || "",
   eyebrow: "Contact",
   title: "Contact us",
   subtitle: "Send a note and we’ll get back to you.",
@@ -323,7 +330,7 @@ export const contact = {
   messagePlaceholder: "Tell us how we can help...",
   messageError: "Message must be at least 10 characters",
   submit: "Send message",
-}
+};
 
 export const footer = {
   socials: [
@@ -384,4 +391,4 @@ export const footer = {
       ],
     },
   ],
-}
+};

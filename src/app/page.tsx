@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Faq } from "@/components/sections/Faq";
 import { Features } from "@/components/sections/Features";
 import { Hero } from "@/components/sections/Hero";
+import { LiveDemo } from "@/components/sections/LiveDemo";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Contact } from "@/components/sections/Contact";
 import { Pricing } from "@/components/sections/Pricing";
@@ -16,7 +17,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <main id="content" className="flex-1">
-        <Hero />
+        <Hero demo={<LiveDemo />} />
         <RootCause />
         <Solution />
         <SocialProof />

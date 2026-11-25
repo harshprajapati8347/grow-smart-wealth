@@ -1,11 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
+import type { ReactNode } from "react"
 import { easeOut } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 
 type RevealProps = {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
   delay?: number
 }

@@ -1,5 +1,3 @@
-"use client"
-
 import { faq } from "@/data/site"
 import {
   Accordion,
