@@ -85,7 +85,7 @@ export function Contact() {
             onSubmit={onSubmit}
             onBlur={onBlur}
             onInput={onInput}
-            className="pf-quote-stage max-w-xl space-y-5 rounded-2xl border border-stone-200/80 bg-white p-7 sm:p-9"
+            className="pf-quote-stage max-w-3xl space-y-5 rounded-2xl border border-stone-200/80 bg-white p-7 sm:p-9"
           >
             <input type="hidden" name="_gotcha" tabIndex={-1} autoComplete="off" />
 

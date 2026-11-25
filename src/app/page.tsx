@@ -1,4 +1,3 @@
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { PurchaseBar } from "@/components/layout/PurchaseBar";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -15,7 +14,6 @@ import { Solution } from "@/components/sections/Solution";
 export default function Home() {
   return (
     <>
-      <AnnouncementBar />
       <SiteHeader />
       <main id="content" className="flex-1">
         <Hero />

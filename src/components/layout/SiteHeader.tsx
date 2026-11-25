@@ -12,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import Image from "next/image"
 
 const linkClass =
   "text-[15px] font-medium text-pf-body transition-colors hover:text-pf-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pf-ink"
@@ -28,11 +29,12 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-pf-line bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex h-[72px] max-w-6xl items-center gap-3 px-4 sm:px-6">
         <a href="/" aria-label="Phantom Flow home" className="shrink-0 rounded-lg">
-          <SvgSlot
+          {/* <SvgSlot
             label="Phantom Flow logo"
             aspect="1 / 1"
             className="size-9 rounded-[8px] border-solid border-pf-line-strong bg-pf-surface"
-          />
+          /> */}
+          <Image src="/logo.png" alt="Phantom Flow logo" width={42} height={42} />
         </a>
 
         <nav className="ml-6 hidden items-center gap-7 lg:flex" aria-label="Primary">
