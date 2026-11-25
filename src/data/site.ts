@@ -1,11 +1,11 @@
 export const bonusDeadline = "2026-12-01";
 
 export const offer = {
-  price: "$149",
+  price: "₹6,999",
   cadence: "one-time",
   purchaseLine: "Grow Smart Wealth $149 · one-time",
-  aiAnnualValue: "$240/yr",
-  suiteValue: "$499",
+  aiAnnualValue: "₹11,558.28/yr",
+  suiteValue: "₹48,063.17",
   discordValue: "$120/yr",
   totalValue: "$850+/yr",
   othersThreeYear: "$1,440–$2,520",
@@ -50,8 +50,8 @@ export const hero = {
 
 export const rootCause = {
   eyebrow: "The root cause",
-  title: "It’s not you. It’s how you’re trading.",
-  subtitle: "It’s not about being smarter or faster. It’s about structure.",
+  title: "It's not your mistake. It's your trading & investing style.",
+  subtitle: "It’s not about being smarter or faster. It’s about understanding.",
   cards: [
     {
       index: "01",
@@ -205,35 +205,21 @@ export const pricing = {
   yearlyLow: "₹46,800",
   yearlyHigh: "₹80,400",
   coreName: "Grow Smart Wealth Core",
-  corePrice: "₹14,351.53",
-  coreAmount: 14351.53,
+  corePrice: "₹6,999",
+  coreAmount: 6999,
   cadence: "one-time",
   riskLead: "One bad trade:",
   riskAmount: "₹192,637.95+",
   riskNote: "gone in a single day",
   items: [
     {
-      name: "Grow Smart Wealth Indicator Suite",
-      value: "₹48,063.17 value",
-      benefits: [
-        "See exactly where to buy and sell",
-        "Signals that cut through the noise",
-        "Catch trend reversals early",
-        "Get alerted the moment a setup forms",
-      ],
-    },
-    {
       name: "Private Discord Community",
-      value: "₹11,558.28/yr value",
-    },
-    {
-      name: "Smart Alerts + Any Market",
-      value: "Included",
+      value: "₹5,000/yr value",
     },
   ],
   totalLabel: "Total value",
   totalValue: "₹59,621.45/yr",
-  youPay: "You pay ₹14,351.53 once",
+  youPay: "You pay ₹6,999 once",
   checkoutNote: "Secure checkout via Stripe · Instant delivery",
   cta: "Get Grow Smart Wealth",
 };
@@ -296,11 +282,7 @@ export const contact = {
   emailError: "Please enter a valid email address",
   interestLabel: "Interested in",
   interestError: "Choose what you’re interested in.",
-  interests: [
-    "Grow Smart Wealth",
-    "Partnership",
-    "Something else",
-  ],
+  interests: ["Grow Smart Wealth", "Partnership", "Something else"],
   messageLabel: "Message",
   messagePlaceholder: "Tell us how we can help...",
   messageError: "Message must be at least 10 characters",

@@ -2,14 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { offer } from "@/data/site";
 import { MotionRoot } from "@/components/shared/MotionRoot";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "Grow Smart Wealth — TradingView Chart Indicator",
-  description: `A TradingView indicator that marks trend, structure and key zones in one overlay. ${offer.price} one-time.`,
+  description: `A TradingView indicator that marks trend, structure and key zones in one overlay.`,
   robots: { index: true, follow: true },
 };
 

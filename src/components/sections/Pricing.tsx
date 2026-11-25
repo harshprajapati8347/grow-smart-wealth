@@ -1,9 +1,9 @@
-import { Check, ShieldCheck } from "lucide-react"
-import { AppLink } from "@/components/shared/AppLink"
-import { pricing } from "@/data/site"
-import { Reveal } from "@/components/shared/Reveal"
+import { Check, ShieldCheck } from "lucide-react";
+import { AppLink } from "@/components/shared/AppLink";
+import { pricing } from "@/data/site";
+import { Reveal } from "@/components/shared/Reveal";
 
-const coreShare = `${(pricing.coreAmount / pricing.comparisonHigh) * 100}%`
+const coreShare = `${(pricing.coreAmount / pricing.comparisonHigh) * 100}%`;
 
 function MoneyRange({ low, high }: { low: string; high: string }) {
   return (
@@ -14,12 +14,15 @@ function MoneyRange({ low, high }: { low: string; high: string }) {
       <wbr />
       <bdi className="whitespace-nowrap">{high}</bdi>
     </span>
-  )
+  );
 }
 
 export function Pricing() {
   return (
-    <section id="pricing" className="relative scroll-mt-24 overflow-hidden bg-white py-24 sm:py-28 md:py-36">
+    <section
+      id="pricing"
+      className="relative scroll-mt-24 overflow-hidden bg-white py-24 sm:py-28 md:py-36"
+    >
       <div className="relative mx-auto max-w-2xl px-4 sm:px-6">
         <Reveal>
           <h2 className="mx-auto mb-10 max-w-2xl text-center text-2xl leading-tight font-bold tracking-[-0.03em] text-balance text-pf-ink sm:mb-12 sm:text-3xl md:text-4xl">
@@ -40,7 +43,10 @@ export function Pricing() {
             </p>
             <p className="mt-3 text-[13px] text-pretty text-pf-quiet sm:text-sm">
               <span className="inline-block">
-                <MoneyRange low={pricing.monthlyLow} high={pricing.monthlyHigh} />
+                <MoneyRange
+                  low={pricing.monthlyLow}
+                  high={pricing.monthlyHigh}
+                />
                 /mo
               </span>
               {" × 12 = "}
@@ -51,28 +57,47 @@ export function Pricing() {
 
           <div className="mt-8 space-y-4 sm:mt-10">
             <div>
-              <p className="text-[13px] text-pf-quiet sm:text-sm">{pricing.comparisonTitle}</p>
-              <div className="mt-1.5 h-2.5 overflow-hidden rounded-full bg-stone-100" aria-hidden>
+              <p className="text-[13px] text-pf-quiet sm:text-sm">
+                {pricing.comparisonTitle}
+              </p>
+              <div
+                className="mt-1.5 h-2.5 overflow-hidden rounded-full bg-stone-100"
+                aria-hidden
+              >
                 <div className="h-full w-full rounded-full bg-stone-400" />
               </div>
             </div>
             <div>
               <div className="flex items-baseline justify-between gap-4">
-                <span className="text-[13px] font-semibold text-pf-ink sm:text-sm">{pricing.coreName}</span>
+                <span className="text-[13px] font-semibold text-pf-ink sm:text-sm">
+                  {pricing.coreName}
+                </span>
                 <span className="text-base font-semibold whitespace-nowrap text-pf-ink tabular-nums sm:text-lg">
                   <bdi>{pricing.corePrice}</bdi>{" "}
-                  <span className="text-[13px] font-normal text-pf-quiet sm:text-sm">{pricing.cadence}</span>
+                  <span className="text-[13px] font-normal text-pf-quiet sm:text-sm">
+                    {pricing.cadence}
+                  </span>
                 </span>
               </div>
-              <div className="mt-1.5 h-2.5 overflow-hidden rounded-full bg-stone-100" aria-hidden>
-                <div className="h-full rounded-full bg-pf-ink" style={{ width: coreShare }} />
+              <div
+                className="mt-1.5 h-2.5 overflow-hidden rounded-full bg-stone-100"
+                aria-hidden
+              >
+                <div
+                  className="h-full rounded-full bg-pf-ink"
+                  style={{ width: coreShare }}
+                />
               </div>
             </div>
           </div>
 
           <p className="mt-6 text-center text-[13px] text-pretty text-pf-quiet sm:text-sm">
-            <span className="font-semibold text-pf-ink">{pricing.riskLead}</span>{" "}
-            <bdi className="font-semibold text-pf-ink tabular-nums">{pricing.riskAmount}</bdi>{" "}
+            <span className="font-semibold text-pf-ink">
+              {pricing.riskLead}
+            </span>{" "}
+            <bdi className="font-semibold text-pf-ink tabular-nums">
+              {pricing.riskAmount}
+            </bdi>{" "}
             {pricing.riskNote}
           </p>
         </Reveal>
@@ -97,18 +122,6 @@ export function Pricing() {
                       {item.value}
                     </span>
                   </div>
-                  {item.benefits ? (
-                    <ul className="mt-1.5 list-inside list-disc space-y-1 ps-6">
-                      {item.benefits.map((benefit) => (
-                        <li
-                          key={benefit}
-                          className="text-[12px] leading-snug text-pretty text-pf-faint sm:text-[13px]"
-                        >
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
                 </li>
               ))}
             </ul>
@@ -146,12 +159,17 @@ export function Pricing() {
               </span>
             </AppLink>
             <div className="mt-4 flex items-center justify-center gap-2 sm:mt-5">
-              <ShieldCheck className="size-4 shrink-0 text-pf-emerald/60" aria-hidden />
-              <p className="text-[12px] text-pretty text-pf-faint sm:text-[13px]">{pricing.checkoutNote}</p>
+              <ShieldCheck
+                className="size-4 shrink-0 text-pf-emerald/60"
+                aria-hidden
+              />
+              <p className="text-[12px] text-pretty text-pf-faint sm:text-[13px]">
+                {pricing.checkoutNote}
+              </p>
             </div>
           </div>
         </Reveal>
       </div>
     </section>
-  )
+  );
 }
