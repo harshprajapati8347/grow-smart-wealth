@@ -3,7 +3,7 @@ export const bonusDeadline = "2026-12-01";
 export const offer = {
   price: "$149",
   cadence: "one-time",
-  purchaseLine: "Phantom Flow $149 · one-time",
+  purchaseLine: "Grow Smart Wealth $149 · one-time",
   aiAnnualValue: "$240/yr",
   suiteValue: "$499",
   discordValue: "$120/yr",
@@ -44,8 +44,8 @@ export const heroTitles = [
 export const hero = {
   prompt: "Does this sound like you?",
   title: ["Know when to buy.", "Know when to sell."],
-  body: "Phantom Flow shows you the zones that matter — right on your chart. You see the setup. You make the call. Ready in under 2 minutes.",
-  cta: "Get Phantom Flow",
+  body: "Grow Smart Wealth shows you the zones that matter — right on your chart. You see the setup. You make the call. Ready in under 2 minutes.",
+  cta: "Get Grow Smart Wealth",
 };
 
 export const rootCause = {
@@ -127,7 +127,7 @@ export const solution = {
       },
     },
   ],
-  closing: "That’s exactly what Phantom Flow was built to do.",
+  closing: "That’s exactly what Grow Smart Wealth was built to do.",
   cta: "See It On Your Chart",
 };
 
@@ -171,35 +171,6 @@ export const features = {
       icon: "/assets/private.svg",
     },
   ],
-  ai: {
-    title: "Phantom AI — Your Trading Assistant",
-    tag: "Limited time bonus",
-    intro:
-      "Got a question about your setup? Ask Phantom AI. It knows the indicator inside and out.",
-    exchanges: [
-      {
-        question: "I just added it to my chart. What am I looking at?",
-        answer:
-          "The colored candles show you the trend — green means up, red means down. The boxes are zones where price likes to bounce. Start by following the colors and watching how price reacts at the zones.",
-      },
-      {
-        question: "There’s a box on my chart. Should I buy here?",
-        answer:
-          "That box is a zone calculated from price data. If the trend is green and price pulls back into that zone, you can watch how price reacts before deciding whether to buy.",
-      },
-      {
-        question:
-          "Can I get alerts so I don’t have to watch the chart all day?",
-        answer:
-          "Yes — click Phantom Flow on your chart, open Settings, turn on the alerts you want, then hit ‘Create Alert’ in TradingView. You’ll get notified on your phone when something happens.",
-      },
-      {
-        question: "Is this a good time to buy?",
-        answer:
-          "Send me a screenshot. I’ll check the trend direction, the zones, and whether the signals line up — and tell you if it looks good or if you should wait.",
-      },
-    ],
-  },
 };
 
 export const howItWorks = {
@@ -208,7 +179,7 @@ export const howItWorks = {
   subtitle: "No coding. No downloads. No experience needed.",
   steps: [
     {
-      title: "Get Phantom Flow",
+      title: "Get Grow Smart Wealth",
       body: "One payment. Instant access. No hidden fees.",
     },
     {
@@ -233,7 +204,7 @@ export const pricing = {
   monthlyHigh: "₹6,700",
   yearlyLow: "₹46,800",
   yearlyHigh: "₹80,400",
-  coreName: "Phantom Flow Core",
+  coreName: "Grow Smart Wealth Core",
   corePrice: "₹14,351.53",
   coreAmount: 14351.53,
   cadence: "one-time",
@@ -242,7 +213,7 @@ export const pricing = {
   riskNote: "gone in a single day",
   items: [
     {
-      name: "Phantom Flow Indicator Suite",
+      name: "Grow Smart Wealth Indicator Suite",
       value: "₹48,063.17 value",
       benefits: [
         "See exactly where to buy and sell",
@@ -264,7 +235,7 @@ export const pricing = {
   totalValue: "₹59,621.45/yr",
   youPay: "You pay ₹14,351.53 once",
   checkoutNote: "Secure checkout via Stripe · Instant delivery",
-  cta: "Get Phantom Flow",
+  cta: "Get Grow Smart Wealth",
 };
 
 export const faq = {
@@ -290,7 +261,7 @@ export const faq = {
     {
       question: "What kind of support do I get?",
       answer:
-        "Private Discord community, direct email support at support@getphantomflow.com, video guides, and full documentation.",
+        "Private Discord community, direct email support at support@getgrowsmartwealth.com, video guides, and full documentation.",
     },
     {
       question: "Is there a free trial or demo?",
@@ -300,19 +271,20 @@ export const faq = {
     {
       question: "Is this a subscription?",
       answer:
-        "No. Phantom Flow Core is a one-time purchase. Most trading indicators charge $40–70 per month — you pay once and own it.",
+        "No. Grow Smart Wealth Core is a one-time purchase. Most trading indicators charge $40–70 per month — you pay once and own it.",
     },
     {
       question: "If it works so well, why sell it?",
       answer:
-        "Because an indicator doesn’t trade. Traders do.\n\nGive ten people the same chart and you’ll get ten different results. The ones who do well see the market clearly and act with discipline. Phantom Flow gives you the first part: trend, structure and momentum on one clean chart, every session. The discipline is yours.\n\nThat’s why sharing it takes nothing from us, and why it’s worth so much to the trader using it. Pay once, and it stays on your chart for good.",
+        "Because an indicator doesn’t trade. Traders do.\n\nGive ten people the same chart and you’ll get ten different results. The ones who do well see the market clearly and act with discipline. Grow Smart Wealth gives you the first part: trend, structure and momentum on one clean chart, every session. The discipline is yours.\n\nThat’s why sharing it takes nothing from us, and why it’s worth so much to the trader using it. Pay once, and it stays on your chart for good.",
     },
   ],
 };
 
 export const contact = {
   // The id in https://formcarry.com/s/{id}. Paste yours here.
-  formcarryId: process.env.NEXT_PUBLIC_FORMCARRY_ID || process.env.FORMCARRY_ID || "",
+  formcarryId:
+    process.env.NEXT_PUBLIC_FORMCARRY_ID || process.env.FORMCARRY_ID || "",
   eyebrow: "Contact",
   title: "Contact us",
   subtitle: "Send a note and we’ll get back to you.",
@@ -324,7 +296,11 @@ export const contact = {
   emailError: "Please enter a valid email address",
   interestLabel: "Interested in",
   interestError: "Choose what you’re interested in.",
-  interests: ["Phantom Flow", "Phantom AI", "Partnership", "Something else"],
+  interests: [
+    "Grow Smart Wealth",
+    "Partnership",
+    "Something else",
+  ],
   messageLabel: "Message",
   messagePlaceholder: "Tell us how we can help...",
   messageError: "Message must be at least 10 characters",
@@ -334,23 +310,23 @@ export const contact = {
 export const footer = {
   socials: [
     {
-      label: "@getphantomflow on Instagram",
-      href: "https://instagram.com/getphantomflow",
+      label: "@getgrowsmartwealth on Instagram",
+      href: "https://instagram.com/getgrowsmartwealth",
       icon: "instagram",
     },
     {
-      label: "@getphantomflow on X",
-      href: "https://x.com/getphantomflow",
+      label: "@getgrowsmartwealth on X",
+      href: "https://x.com/getgrowsmartwealth",
       icon: "x",
     },
     {
-      label: "@getphantomflow on YouTube",
-      href: "https://youtube.com/@getphantomflow",
+      label: "@getgrowsmartwealth on YouTube",
+      href: "https://youtube.com/@getgrowsmartwealth",
       icon: "youtube",
     },
   ],
   disclaimer:
-    "Phantom Flow is a trading tool designed to support your own analysis and decision-making. We do not provide financial advice, and results are not guaranteed. Trading involves risk. Always do your own research.",
+    "Grow Smart Wealth is a trading tool designed to support your own analysis and decision-making. We do not provide financial advice, and results are not guaranteed. Trading involves risk. Always do your own research.",
   address: "131 Continental Dr, Newark, DE 19713, US",
   groups: [
     {

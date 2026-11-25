@@ -13,12 +13,12 @@ export function SiteHeader() {
       <div className="mx-auto flex h-[72px] max-w-6xl items-center gap-3 px-4 sm:px-6">
         <AppLink
           href="/"
-          aria-label="Phantom Flow home"
+          aria-label="Grow Smart Wealth home"
           className="shrink-0 rounded-lg"
         >
           <Image
             src="/logo.png"
-            alt="Phantom Flow logo"
+            alt="Grow Smart Wealth logo"
             width={42}
             height={42}
             priority

@@ -8,7 +8,7 @@ import { MotionRoot } from "@/components/shared/MotionRoot";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Phantom Flow — TradingView Chart Indicator",
+  title: "Grow Smart Wealth — TradingView Chart Indicator",
   description: `A TradingView indicator that marks trend, structure and key zones in one overlay. ${offer.price} one-time.`,
   robots: { index: true, follow: true },
 };
