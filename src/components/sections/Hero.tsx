@@ -52,7 +52,7 @@ export function Hero() {
 
   useEffect(() => {
     return onServiceChange((id) => {
-      const next = heroDemos.findIndex((demo) => demo.id === id);
+      const next = heroDemos.findIndex((demo) => demo.title === id);
       if (next < 0) return;
       setDemoLocked(true);
       setDemoIndex(next);
@@ -62,12 +62,12 @@ export function Hero() {
   function selectDemo(next: number) {
     setDemoLocked(true);
     setDemoIndex(next);
-    selectService(heroDemos[next].id);
+    selectService(heroDemos[next].title);
   }
 
   function buyActiveService() {
     setDemoLocked(true);
-    selectService(heroDemos[demoIndex].id);
+    selectService(heroDemos[demoIndex].title);
     const pricingSection = document.getElementById("pricing");
     if (!pricingSection) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
