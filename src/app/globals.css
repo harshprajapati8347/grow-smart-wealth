@@ -181,10 +181,14 @@
 }
 
 @media (forced-colors: active) {
-  .testimonial-tab[aria-selected="true"]::after {
+  .testimonial-tab[aria-selected="true"]::after,
+  .pricing-tab[data-state="active"]::after {
     content: "";
     position: absolute;
-    inset: auto 0.75rem 0.3rem;
+    inset: auto 0.75rem 0.15rem;
+    height: auto;
+    background: transparent;
     border-block-end: 3px solid CanvasText;
+    opacity: 1;
   }
 }

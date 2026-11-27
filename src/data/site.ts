@@ -213,8 +213,7 @@ export const howItWorks = {
   ],
 };
 
-export const pricing = {
-  title: "One investment. Yours for life.",
+const sharedPricing = {
   comparisonTitle: "Other indicators",
   comparisonCaption: "over 3 years",
   othersLow: "₹140,400",
@@ -242,6 +241,41 @@ export const pricing = {
   youPay: "You pay ₹6,999 once",
   checkoutNote: "Secure checkout via Stripe · Instant delivery",
   cta: "Get Grow Smart Wealth",
+};
+
+export const services = [
+  {
+    id: "1-day",
+    title: "1 Day Candle",
+  },
+  {
+    id: "1-week",
+    title: "1 Week Candle",
+  },
+  {
+    id: "1-month",
+    title: "1 Month Candle",
+  },
+];
+
+function pricingPlan(
+  service: (typeof services)[number],
+) {
+  return {
+    id: service.id,
+    tab: service.title,
+    ...sharedPricing,
+    items: sharedPricing.items.map((item) => ({ ...item })),
+  };
+}
+
+export const pricing = {
+  title: "One investment. Yours for life.",
+  plans: [
+    pricingPlan(services[0]),
+    pricingPlan(services[1]),
+    pricingPlan(services[2]),
+  ],
 };
 
 export const faq = {
@@ -302,7 +336,7 @@ export const contact = {
   emailError: "Please enter a valid email address",
   interestLabel: "Interested in",
   interestError: "Choose what you’re interested in.",
-  interests: ["Grow Smart Wealth", "Partnership", "Something else"],
+  interests: services.map((service) => service.title),
   messageLabel: "Message",
   messagePlaceholder: "Tell us how we can help...",
   messageError: "Message must be at least 10 characters",

@@ -7,6 +7,7 @@ import { CtaLink } from "@/components/shared/CtaLink";
 import { LiveDemo } from "@/components/sections/LiveDemo";
 import { Reveal } from "@/components/shared/Reveal";
 import { fadeUp, stagger } from "@/lib/motion";
+import { onServiceChange, selectService } from "@/lib/selected-service";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -49,9 +50,31 @@ export function Hero() {
     setDemoStatus(`Showing ${heroDemos[demoIndex].title}`);
   }, [demoIndex]);
 
+  useEffect(() => {
+    return onServiceChange((id) => {
+      const next = heroDemos.findIndex((demo) => demo.id === id);
+      if (next < 0) return;
+      setDemoLocked(true);
+      setDemoIndex(next);
+    });
+  }, []);
+
   function selectDemo(next: number) {
     setDemoLocked(true);
     setDemoIndex(next);
+    selectService(heroDemos[next].id);
+  }
+
+  function buyActiveService() {
+    setDemoLocked(true);
+    selectService(heroDemos[demoIndex].id);
+    const pricingSection = document.getElementById("pricing");
+    if (!pricingSection) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    pricingSection.scrollIntoView({
+      behavior: reduce ? "auto" : "smooth",
+      block: "start",
+    });
   }
 
   return (
@@ -135,7 +158,7 @@ export function Hero() {
           <p className="sr-only" role="status" aria-live="polite">
             {demoStatus}
           </p>
-          <LiveDemo activeIndex={demoIndex} />
+          <LiveDemo activeIndex={demoIndex} onBuyNow={buyActiveService} />
         </section>
       </Reveal>
     </section>

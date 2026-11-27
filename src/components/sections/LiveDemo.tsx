@@ -2,9 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import { heroDemoSeconds, heroDemos } from "@/data/site";
-import { AppLink } from "@/components/shared/AppLink";
 
-export function LiveDemo({ activeIndex }: { activeIndex: number }) {
+export function LiveDemo({
+  activeIndex,
+  onBuyNow,
+}: {
+  activeIndex: number;
+  onBuyNow: () => void;
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -53,6 +58,15 @@ export function LiveDemo({ activeIndex }: { activeIndex: number }) {
         <div className="flex flex-wrap items-center justify-center gap-2 sm:px-16">
           <p className="rounded-full bg-muted px-3 py-1 text-xs text-pf-quiet">
             Live demo
+          </p>
+          <p className="rounded-full bg-muted px-3 py-1 text-xs text-pf-quiet">
+            <button
+              type="button"
+              onClick={onBuyNow}
+              className="text-pf-quiet underline-offset-2 hover:text-pf-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pf-ink"
+            >
+              Buy now
+            </button>
           </p>
         </div>
       </div>
